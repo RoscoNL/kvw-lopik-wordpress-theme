@@ -1,0 +1,227 @@
+/* ============================================
+   CUSTOM STYLES - KVW LOPIK
+   ============================================ */
+
+/* Entry Content Styling */
+.entry-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.entry-content h2 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+    color: var(--kvw-green);
+}
+
+.entry-content h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--kvw-dark);
+}
+
+.entry-content p {
+    margin-bottom: 1rem;
+}
+
+.entry-content ul,
+.entry-content ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.entry-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Post Meta */
+.entry-meta {
+    color: #999;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.pagination a,
+.pagination span {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--kvw-green);
+    border-radius: 0.5rem;
+    color: var(--kvw-green);
+}
+
+.pagination a:hover {
+    background-color: var(--kvw-green);
+    color: white;
+}
+
+.pagination .current {
+    background-color: var(--kvw-green);
+    color: white;
+}
+
+/* Widget Styles */
+.widget {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--kvw-light);
+    border-radius: 0.5rem;
+    border-left: 5px solid var(--kvw-green);
+}
+
+.widget-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--kvw-green);
+}
+
+.widget ul {
+    list-style: none;
+}
+
+.widget ul li {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.widget ul li:last-child {
+    border-bottom: none;
+}
+
+.widget a {
+    color: var(--kvw-green);
+}
+
+.widget a:hover {
+    color: var(--kvw-pink);
+}
+
+/* Gallery Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+table th {
+    background-color: var(--kvw-green);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+}
+
+table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--kvw-light);
+}
+
+table tr:hover {
+    background-color: var(--kvw-light);
+}
+
+/* Blockquote Styles */
+blockquote {
+    border-left: 5px solid var(--kvw-green);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #666;
+}
+
+/* Code Styles */
+code,
+pre {
+    background-color: var(--kvw-light);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-family: 'Courier New', monospace;
+}
+
+pre {
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+/* Image Styles */
+.entry-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+/* No Posts Message */
+.no-posts {
+    text-align: center;
+    padding: 3rem 0;
+    color: #999;
+}
+
+/* Sidebar */
+.sidebar {
+    margin-top: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .entry-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .entry-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .entry-content {
+        font-size: 1rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    table th,
+    table td {
+        padding: 0.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .gallery-item img {
+        height: 150px;
+    }
+}
