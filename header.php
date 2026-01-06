@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme
+ * The header for our theme - PIXEL PERFECT
  *
  * @package KVW_Lopik
  */
@@ -32,14 +32,12 @@
                 </div>
 
                 <nav id="site-navigation" class="main-navigation">
-                    <?php
-                    wp_nav_menu( array(
-                        'theme_location' => 'primary',
-                        'fallback_cb'    => 'kvw_lopik_fallback_menu',
-                        'container'      => false,
-                        'items_wrap'     => '%3$s',
-                    ) );
-                    ?>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
+                    <a href="<?php echo esc_url( home_url( '/programma' ) ); ?>">Programma</a>
+                    <a href="<?php echo esc_url( home_url( '/inschrijven' ) ); ?>">Inschrijven</a>
+                    <a href="<?php echo esc_url( home_url( '/vrijwilligers' ) ); ?>">Vrijwilligers</a>
+                    <a href="<?php echo esc_url( home_url( '/over-ons' ) ); ?>">Over Ons</a>
+                    <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="contact-button">Contact</a>
                 </nav>
             </div>
         </header>
