@@ -22,17 +22,13 @@
         <header id="masthead" class="site-header">
             <div class="header-container">
                 <div class="site-logo">
-                    <?php
-                    if ( has_custom_logo() ) {
-                        the_custom_logo();
-                    } else {
-                        ?>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                            🏕️ KVW Lopik
-                        </a>
-                        <?php
-                    }
-                    ?>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-link">
+                        <div class="logo-icon">
+                            <span class="sun">☀️</span>
+                            <span class="tent">⛺</span>
+                        </div>
+                        <span class="logo-text"><span class="kvw">KVW</span> <span class="lopik">Lopik</span></span>
+                    </a>
                 </div>
 
                 <nav id="site-navigation" class="main-navigation">
