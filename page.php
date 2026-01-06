@@ -22,8 +22,8 @@ get_header();
         </section>
 
         <!-- PAGE CONTENT -->
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <div class="container" style="padding: 4rem 0;">
+        <section class="site-content" style="padding: 4rem 0; background: #fff;">
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
                 <?php
                 if ( has_post_thumbnail() ) {
                     ?>
@@ -34,11 +34,11 @@ get_header();
                 }
                 ?>
 
-                <div class="entry-content">
+                <div class="entry-content" style="font-size: 1.125rem; line-height: 1.8; color: #333;">
                     <?php the_content(); ?>
                 </div>
-            </div>
-        </article>
+            </article>
+        </section>
 
         <?php
     }
