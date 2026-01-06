@@ -32,12 +32,14 @@
                 </div>
 
                 <nav id="site-navigation" class="main-navigation">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
-                    <a href="<?php echo esc_url( home_url( '/programma' ) ); ?>">Programma</a>
-                    <a href="<?php echo esc_url( home_url( '/inschrijven' ) ); ?>">Inschrijven</a>
-                    <a href="<?php echo esc_url( home_url( '/vrijwilligers' ) ); ?>">Vrijwilligers</a>
-                    <a href="<?php echo esc_url( home_url( '/over-ons' ) ); ?>">Over Ons</a>
-                    <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="contact-button">Contact</a>
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'primary',
+                        'container'      => false,
+                        'items_wrap'     => '%3$s',
+                        'fallback_cb'    => false,
+                    ) );
+                    ?>
                 </nav>
             </div>
         </header>
