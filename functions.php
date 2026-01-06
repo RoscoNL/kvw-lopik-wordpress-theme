@@ -52,14 +52,11 @@ add_action( 'after_setup_theme', 'kvw_lopik_setup' );
  * Enqueue scripts and styles
  */
 function kvw_lopik_enqueue_assets() {
-    // Enqueue main stylesheet
-    wp_enqueue_style( 'kvw-lopik-style', get_stylesheet_uri(), array(), '1.0.0' );
-
-    // Enqueue custom CSS
-    wp_enqueue_style( 'kvw-lopik-custom', get_template_directory_uri() . '/css/custom.css', array(), '1.0.0' );
+    // Enqueue main stylesheet only (all CSS is in style.css now)
+    wp_enqueue_style( 'kvw-lopik-style', get_stylesheet_uri(), array(), '2.0.0' );
 
     // Enqueue main JavaScript
-    wp_enqueue_script( 'kvw-lopik-main', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true );
+    wp_enqueue_script( 'kvw-lopik-main', get_template_directory_uri() . '/js/main.js', array(), '2.0.0', true );
 
     // Localize script for AJAX
     wp_localize_script( 'kvw-lopik-main', 'kvwLopik', array(
@@ -67,6 +64,13 @@ function kvw_lopik_enqueue_assets() {
     ) );
 }
 add_action( 'wp_enqueue_scripts', 'kvw_lopik_enqueue_assets' );
+
+// Force HTTPS for assets
+function kvw_lopik_force_https_urls( $url ) {
+    return str_replace( 'http://', 'https://', $url );
+}
+add_filter( 'stylesheet_uri', 'kvw_lopik_force_https_urls' );
+add_filter( 'template_directory_uri', 'kvw_lopik_force_https_urls' );
 
 /**
  * Register custom post types
